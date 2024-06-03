@@ -17,3 +17,7 @@ float person::operator+(const person& otherPerson) {
     // Example: return the sum of weights of two persons
     return mWeight + otherPerson.mWeight;
 }
+
+person::operator int(){
+    return mAge;
+}
