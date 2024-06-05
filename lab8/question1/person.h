@@ -1,19 +1,25 @@
-#include<string>
+
+#define PERSON_H
+
+#include <string>
 using namespace std;
 
-class person{
-    operator int();
-    public:
+class person {
+public:
+    // Constructors
     person();
     person(float newWeight);
-    int John;
-    string Jane;
+
     ~person();
 
-    float operator+(const person& otherPerson);
+    float operator+(const person& otherPerson) const;
 
-    private:
+    operator int() const;
+
+private:
     float mWeight;
     string mFirstName;
     int mAge;
 };
+
+
